@@ -1,0 +1,8 @@
+<%= component_controller :span do %>
+  <%= @model.class %>
+  <%= @attribute %>
+  <%= @hover %>
+  <%= reflex_tag "mouseover->show", :span do %>
+    Mouse over me
+  <% end %>
+<% end %>

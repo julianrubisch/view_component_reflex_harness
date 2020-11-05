@@ -1,5 +1,20 @@
-<button data-reflex="click->Example#test">Test</button>
+<button data-reflex="click->Example#test_page">Click me to render the post via page morph</button>
 
-<% if @stimulus_reflex %>
-  <h1>Success! Random: <%= (rand * 100).to_i %></h1>
-<% end %>
+<button data-reflex="click->Example#test_selector">Click me to render the post via selector morph</button>
+<%# if @stimulus_reflex %>
+<!-- <h1>Success! Random: <%= (rand * 100).to_i %></h1> -->
+<%# end %>
+
+<p>
+  Page Morph:<br/>
+  <% if @post.present? %>
+    <%= render(InlineEditComponent.new(model: Post.first, attribute: :title))  %>
+  <% end %>
+</p>
+
+<p>
+  Selector Morph:<br/>
+  <div id="post-container"></div>
+</p>
+
+
