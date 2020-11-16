@@ -1,8 +1,12 @@
 class InlineEditComponent < ViewComponentReflex::Component
-  def initialize(model:, attribute:)
-    @model = model
+  def initialize(resource:, attribute:)
+    @resource = resource
     @attribute = attribute
     @hover = false
+  end
+
+  def value
+    "#{@resource[@attribute]} #{@resource.id}"
   end
 
   def show

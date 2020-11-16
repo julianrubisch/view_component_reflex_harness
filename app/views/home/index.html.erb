@@ -1,16 +1,12 @@
-<button data-reflex="click->Example#test_page">Click me to render the post via page morph</button>
+<button data-reflex="click->Example#create">Click me to create a post</button><br/>
 
-<button data-reflex="click->Example#test_selector">Click me to render the post via selector morph</button>
-<%# if @stimulus_reflex %>
-<!-- <h1>Success! Random: <%= (rand * 100).to_i %></h1> -->
-<%# end %>
+<button data-reflex="click->Example#destroy">Click me to delete the last post</button><br/>
 
-<p>
-  Page Morph:<br/>
-  <% if @post.present? %>
-    <%= render(InlineEditComponent.new(model: Post.first, attribute: :title))  %>
-  <% end %>
-</p>
+<br/>
+
+<% @posts.each do |p| %>
+  <button data-reflex="click->Example#test_selector" data-id="<%= p.id %>">Click me to render post <%= p.id %> via selector morph</button><br/>
+<% end %>
 
 <p>
   Selector Morph:<br/>

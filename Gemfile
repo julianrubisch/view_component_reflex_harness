@@ -10,7 +10,7 @@ gem 'webpacker', '~> 4.0'
 gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
 gem "hiredis"
 
-gem "stimulus_reflex", "~> 3.3.0" # github: "hopsoft/stimulus_reflex", branch: "master"
+gem "stimulus_reflex", "~> 3.4.0.pre3" # github: "hopsoft/stimulus_reflex", branch: "master"
 gem "cable_ready", "~> 4.3"
 
 group :development, :test do
@@ -25,4 +25,4 @@ group :development do
 end
 
 gem "view_component", require: "view_component/engine"
-gem "view_component_reflex", "~> 2.6"
+gem "view_component_reflex", github: "julianrubisch/view_component_reflex", branch: "fix-removed-url-params" # path: "../view_component_reflex" # "~> 2.6"

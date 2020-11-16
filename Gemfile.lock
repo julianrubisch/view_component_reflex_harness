@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/julianrubisch/view_component_reflex.git
+  revision: 6da440c75fbdbad51a4af6c3efd00475f199029f
+  branch: fix-removed-url-params
+  specs:
+    view_component_reflex (2.6.1)
+      rails (>= 5.2, < 7.0)
+      stimulus_reflex (>= 3.3.0)
+      view_component
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -164,8 +174,7 @@ GEM
     standard (0.4.7)
       rubocop (~> 0.85.0)
       rubocop-performance (~> 1.6.0)
-    stimulus_reflex (3.3.0)
-      cable_ready (>= 4.3.0)
+    stimulus_reflex (3.4.0.pre3)
       nokogiri
       rack
       rails (>= 5.2)
@@ -177,10 +186,6 @@ GEM
     unicode-display_width (1.7.0)
     view_component (2.21.0)
       activesupport (>= 5.0.0, < 7.0)
-    view_component_reflex (2.6.0)
-      rails (>= 5.2, < 7.0)
-      stimulus_reflex (~> 3.3.0)
-      view_component
     web-console (4.0.3)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -209,9 +214,9 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.2)
   redis (>= 4.0)
   standard
-  stimulus_reflex (~> 3.3.0)
+  stimulus_reflex (~> 3.4.0.pre3)
   view_component
-  view_component_reflex (~> 2.6)
+  view_component_reflex!
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
 

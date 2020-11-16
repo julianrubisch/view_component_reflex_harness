@@ -1,8 +1,13 @@
 <%= component_controller :span do %>
-  <%= @model.class %>
-  <%= @attribute %>
-  <%= @hover %>
-  <%= reflex_tag "mouseover->show", :span do %>
-    Mouse over me
+  <%= reflex_tag "click->show", :button do %>
+    Click to show
   <% end %>
+  <%= reflex_tag "click->hide", :button do %>
+    Click to hide
+  <% end %>
+  <p>
+    <% if @hover %>
+      <%= value %>
+    <% end %>
+  </p>
 <% end %>
