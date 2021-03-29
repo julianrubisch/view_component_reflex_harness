@@ -1,15 +1,13 @@
 class InlineEditComponent < ViewComponentReflex::Component
-  def initialize(model:, attribute:)
-    @model = model
-    @attribute = attribute
-    @hover = false
+  def initialize(editing: false)
+    @editing = editing
   end
 
-  def show
-    @hover = true
+  def arm
+    @editing = true
   end
 
-  def hide
-    @hover = false
+  def disarm
+    @editing = false
   end
 end

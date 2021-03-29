@@ -1,6 +1,0 @@
-class InlineEditComponent < ViewComponent::Base
-  def initialize(model:, attribute:)
-    @model = model
-    @attribute = attribute
-  end
-end
